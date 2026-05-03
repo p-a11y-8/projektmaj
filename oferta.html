@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/podstrony.css" rel="stylesheet">
+    <link rel="icon" href="media/mini-logo.png" type="image/png" style="width: 200%;">
+    <title>Drone Studio</title>
+    
+</head>
+<body>
+        
+        <!--WERSJA KOMPUTER MENU I LOGO-->
+  <input type="checkbox" id="hamburger">
+  <header class="header">
+    <!--LOGO-->
+    <a href="index.html">
+      <img src="media/logo-beztla.png" class="logo">
+    </a>
+
+    <!-- KOMPUTER -->
+    <section class="komputer">
+      <div class="container1">
+
+        <nav class="menu_active">
+          <ul>
+            <li>
+              <input type="checkbox" id="submenu-toggle">
+              <label for="submenu-toggle" class="submenu-label">GŁÓWNA</label>
+              <ul class="sub-menu">
+                <li><a href="index.html#" onclick="document.getElementById('submenu-toggle').checked = false">Start</a>
+                </li>
+                <li><a href="index.html#o-studio" onclick="document.getElementById('submenu-toggle').checked = false">O
+                    Studio</a></li>
+                <li><a href="index.html#zaufanie"
+                    onclick="document.getElementById('submenu-toggle').checked = false">Zaufanie</a></li>
+              </ul>
+            </li>
+            <li><a href="oferta.html">OFERTA</a></li>
+            <li><a href="realizacje.html">REALIZACJE</a></li>
+            <li><a href="o-nas.html">O NAS</a></li>
+            <li><a href="kontakt.html">KONTAKT</a></li>
+            <li>
+              <label class="hc-switch">
+                <input type="checkbox" class="hc-checkbox" onclick="document.body.classList.toggle('hc')">
+                KONTRAST
+              </label>
+            </li>
+            <li>
+              <label class="wm-switch">
+                <input type="checkbox" class="wm-checkbox" onclick="document.body.classList.toggle('wm')">
+                JASNY TRYB
+              </label>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- TELEFON -->
+    <section>
+      <div class="container2">
+        <label for="hamburger" class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+    </section>
+
+  </header>
+
+  <nav class="menu">
+    <ul>
+      <li>
+        <input type="checkbox" id="submenu-toggle-mb">
+        <label for="submenu-toggle-mb" class="submenu-label">GŁÓWNA</label>
+        <ul class="sub-menu-mb">
+          <li><a href="index.html"
+              onclick="document.getElementById('submenu-toggle-mb').checked = false; document.getElementById('hamburger').checked = false">Start</a>
+          </li>
+          <li><a href="index.html#o-studio"
+              onclick="document.getElementById('submenu-toggle-mb').checked = false; document.getElementById('hamburger').checked = false">O
+              Studio</a></li>
+          <li><a href="index.html#zaufanie"
+              onclick="document.getElementById('submenu-toggle-mb').checked = false; document.getElementById('hamburger').checked = false">Zaufanie</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="oferta.html">OFERTA</a></li>
+      <li><a href="realizacje.html">REALIZACJE</a></li>
+      <li><a href="o-nas.html">O NAS</a></li>
+      <li><a href="kontakt.html">KONTAKT</a></li>
+      <li>
+        <label class="hc-switch">
+          <input type="checkbox" class="hc-checkbox" onclick="document.body.classList.toggle('hc')">
+          KONTRAST
+        </label>
+      </li>
+      <li>
+        <label class="wm-switch">
+          <input type="checkbox" class="wm-checkbox" onclick="document.body.classList.toggle('wm')">
+          JASNY TRYB
+        </label>
+      </li>
+    </ul>
+  </nav>
+  <!--Wideo KOMP-->
+  <section class="video-pc">
+    <video class="video-desktop" autoplay muted loop playsinline>
+      <source src="media/video-background.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!--Wideo TEL-->
+  <section class="video-mb">
+    <video class="video-mb" autoplay muted loop playsinline>
+      <source src="media/video-background-pion.mp4" type="video/mp4">
+    </video>
+  </section>
+<!-- Treść strony -->
+<main class="tresc">
+    <section>
+    <h2>Nasza oferta</h2>
+
+        <p>🎥 Filmy promocyjne dla firm</p>
+        <p>📱 Rolki na Instagram / TikTok</p>
+        <p>🚁 Ujęcia dronem w 4K</p>
+        <p>🏠 Filmy nieruchomości</p>
+        <p>🎉 Eventy, imprezy, relacje</p>
+        <p>🎬 Montaż i korekcja kolorów</p>
+        <p>📦 Szybka realizacja</p>
+        <p>💼 Profesjonalne podejście</p>
+</section>
+<a href="kontakt.html" class="button">Skontaktuj się</a>
+
+<a href="#" class="back-to-top">Powrót do góry ↑</a>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Drone Studio. Wszelkie prawa zastrzeżone.</p>
+  <p>Autor i projektant strony: <span class="footer-author">Piotr Jaruszowicz</span></p>
+</footer>
+
+</body>
+</html>

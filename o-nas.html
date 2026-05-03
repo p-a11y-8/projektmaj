@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style/podstrony.css" rel="stylesheet">
+  <link rel="icon" href="media/mini-logo.png" type="image/png" style="width: 200%;">
+  <title>Drone Studio</title>
+
+</head>
+
+<body>
+
+  <!--WERSJA KOMPUTER MENU I LOGO-->
+  <input type="checkbox" id="hamburger">
+  <header class="header">
+    <!--LOGO-->
+    <a href="index.html">
+      <img src="media/logo-beztla.png" class="logo">
+    </a>
+
+    <!-- KOMPUTER -->
+    <section class="komputer">
+      <div class="container1">
+
+        <nav class="menu_active">
+          <ul>
+            <li>
+              <input type="checkbox" id="submenu-toggle">
+              <label for="submenu-toggle" class="submenu-label">GŁÓWNA</label>
+              <ul class="sub-menu">
+                <li><a href="index.html#" onclick="document.getElementById('submenu-toggle').checked = false">Start</a>
+                </li>
+                <li><a href="index.html#o-studio" onclick="document.getElementById('submenu-toggle').checked = false">O
+                    Studio</a></li>
+                <li><a href="index.html#zaufanie"
+                    onclick="document.getElementById('submenu-toggle').checked = false">Zaufanie</a></li>
+              </ul>
+            </li>
+            <li><a href="oferta.html">OFERTA</a></li>
+            <li><a href="realizacje.html">REALIZACJE</a></li>
+            <li><a href="o-nas.html">O NAS</a></li>
+            <li><a href="kontakt.html">KONTAKT</a></li>
+            <li>
+              <label class="hc-switch">
+                <input type="checkbox" class="hc-checkbox" onclick="document.body.classList.toggle('hc')">
+                KONTRAST
+              </label>
+            </li>
+            <li>
+              <label class="wm-switch">
+                <input type="checkbox" class="wm-checkbox" onclick="document.body.classList.toggle('wm')">
+                JASNY TRYB
+              </label>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- TELEFON -->
+    <section>
+      <div class="container2">
+        <label for="hamburger" class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+    </section>
+
+  </header>
+
+  <nav class="menu">
+    <ul>
+      <li>
+        <input type="checkbox" id="submenu-toggle-mb">
+        <label for="submenu-toggle-mb" class="submenu-label">GŁÓWNA</label>
+        <ul class="sub-menu-mb">
+          <li><a href="index.html"
+              onclick="document.getElementById('submenu-toggle-mb').checked = false; document.getElementById('hamburger').checked = false">Start</a>
+          </li>
+          <li><a href="index.html#o-studio"
+              onclick="document.getElementById('submenu-toggle-mb').checked = false; document.getElementById('hamburger').checked = false">O
+              Studio</a></li>
+          <li><a href="index.html#zaufanie"
+              onclick="document.getElementById('submenu-toggle-mb').checked = false; document.getElementById('hamburger').checked = false">Zaufanie</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="oferta.html">OFERTA</a></li>
+      <li><a href="realizacje.html">REALIZACJE</a></li>
+      <li><a href="o-nas.html">O NAS</a></li>
+      <li><a href="kontakt.html">KONTAKT</a></li>
+      <li>
+        <label class="hc-switch">
+          <input type="checkbox" class="hc-checkbox" onclick="document.body.classList.toggle('hc')">
+          KONTRAST
+        </label>
+      </li>
+      <li>
+        <label class="wm-switch">
+          <input type="checkbox" class="wm-checkbox" onclick="document.body.classList.toggle('wm')">
+          JASNY TRYB
+        </label>
+      </li>
+    </ul>
+  </nav>
+  <!--Wideo KOMP-->
+  <section class="video-pc">
+    <video class="video-desktop" autoplay muted loop playsinline>
+      <source src="media/video-background.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!--Wideo TEL-->
+  <section class="video-mb">
+    <video class="video-mb" autoplay muted loop playsinline>
+      <source src="media/video-background-pion.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <main class="tresc">
+    <section>
+      <h1>O NAS</h1>
+      <h2>DRONE STUDIO</h2>
+      <h2>Nowoczesna produkcja filmowa. Świeże spojrzenie. Realne efekty. </h2>
+
+      <p>
+        DRONE STUDIO to kreatywne studio filmowe specjalizujące się w produkcji nowoczesnych materiałów wideo z
+        wykorzystaniem dronów oraz kamer naziemnych. Łączymy pasję do obrazu, technologii i opowiadania historii,
+        tworząc filmy, które nie tylko dobrze wyglądają, ale przede wszystkim działają marketingowo.
+      </p>
+
+      <figure class="foto-miejsce">
+        <img src="media/dron.jpg" alt="Dron Studio - Praca w terenie">
+      </figure>
+
+      <p>Nie tworzymy przypadkowych ujęć. Każdy kadr ma cel.</p>
+
+      <h2>Nasza misja</h2>
+      <p>
+        Naszą misją jest pokazywanie marek, miejsc i wydarzeń w sposób, który przyciąga uwagę od pierwszej sekundy. W
+        świecie, w którym odbiorca decyduje w kilka sekund, czy zostaje — my dbamy o to, żeby został.
+      </p>
+
+      <p><strong>Tworzymy wideo, które:</strong></p>
+      <ul class="lista-atuty">
+        <li>buduje profesjonalny wizerunek</li>
+        <li>wzmacnia rozpoznawalność marki</li>
+        <li>angażuje odbiorców</li>
+        <li>realnie wspiera sprzedaż i promocję</li>
+      </ul>
+
+      <figure class="foto-miejsce">
+        <img src="media/dron2.jpg" alt="Dron Studio - Realizacje">
+      </figure>
+
+      <h2>Nasze podejście</h2>
+      <p>
+        Każdy projekt zaczynamy od zrozumienia potrzeb klienta. Nie działamy według jednego schematu, bo każda firma,
+        marka czy wydarzenie ma swoją historię.
+      </p>
+
+      <p><strong>Jak pracujemy?</strong></p>
+      <ul class="lista-praca">
+        <li>Rozmawiamy i analizujemy cel projektu</li>
+        <li>Proponujemy koncepcję i styl wizualny</li>
+        <li>Realizujemy nagrania (ziemia + powietrze)</li>
+        <li>Montujemy materiał z dbałością o detale</li>
+        <li>Dopieszczamy film aż do finalnej wersji</li>
+      </ul>
+
+      <p>Stawiamy na jakość, estetykę i spójność.</p>
+
+      <figure class="foto-miejsce">
+        <img src="media/dron3.jpg" alt="Dron Studio - Sprzęt Kinowy">
+      </figure>
+
+      <h2>Technologia i sprzęt</h2>
+      <p>
+        Pracujemy wyłącznie na profesjonalnym sprzęcie, który pozwala nam osiągać kinową jakość obrazu.
+      </p>
+      <ul class="lista-sprzet">
+        <li>drony klasy premium</li>
+        <li>kamery 4K / 6K</li>
+        <li>stabilizatory obrazu</li>
+        <li>profesjonalne mikrofony</li>
+        <li>zaawansowane narzędzia do montażu i color gradingu</li>
+      </ul>
+      <p>Wszystkie loty realizujemy zgodnie z przepisami, z zachowaniem bezpieczeństwa i obowiązujących norm.</p>
+
+      <h2>Co nas wyróżnia?</h2>
+      <ul class="lista-wyrozniki">
+        <li>indywidualne podejście do każdego projektu</li>
+        <li>nowoczesny, cinematic styl</li>
+        <li>legalne i bezpieczne loty dronem</li>
+        <li>doświadczenie w pracy z biznesem i instytucjami</li>
+        <li>szybka komunikacja i terminowość</li>
+      </ul>
+
+      <p>Nie obiecujemy cudów — dowozimy jakość.</p>
+
+      <figure class="foto-miejsce">
+        <img src="media/dron.jpg" alt="Dron Studio - Profesjonalne portfolio">
+      </figure>
+
+      <h2>Dla kogo pracujemy?</h2>
+      <p>Współpracujemy m.in. z:</p>
+      <ul class="lista-klienci">
+        <li>firmami i markami</li>
+        <li>restauracjami i hotelami</li>
+        <li>deweloperami i branżą nieruchomości</li>
+        <li>samorządami i instytucjami</li>
+        <li>organizatorami wydarzeń</li>
+        <li>klientami indywidualnymi</li>
+      </ul>
+      <p>Zarówno przy małych projektach, jak i większych produkcjach.</p>
+
+      <h2>Dlaczego wideo?</h2>
+      <p>Wideo to dziś najskuteczniejsza forma komunikacji. Dobrze zrealizowany film:</p>
+      <ul class="lista-dlaczego">
+        <li>przyciąga uwagę w social media</li>
+        <li>zwiększa zaufanie do marki</li>
+        <li>wyróżnia na tle konkurencji</li>
+        <li>zostaje w pamięci odbiorcy</li>
+      </ul>
+      <p>My wiemy, jak zrobić to dobrze.</p>
+
+      <figure class="foto-miejsce">
+        <img src="media/dron2.jpg" alt="Dron Studio - Kontakt i Współpraca">
+      </figure>
+
+      <h2>DRONE STUDIO</h2>
+      <p>
+        Działamy lokalnie i ogólnopolsko. Realizujemy projekty zarówno w plenerze, jak i w przestrzeniach zamkniętych.
+      </p>
+
+      <p>Jeśli szukasz partnera, który rozumie obraz, myśli marketingowo i dba o detale — jesteś w dobrym miejscu.</p>
+
+      <h2>Masz pomysł na film?</h2>
+      <p>Chcesz pokazać swój biznes z nowej perspektywy?</p>
+      <p><a href="kontakt.html" class="button">Skontaktuj się z nami i zacznijmy współpracę.</a></p>
+
+      <a href="#" class="back-to-top">Powrót do góry ↑</a>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Drone Studio. Wszelkie prawa zastrzeżone.</p>
+    <p>Autor i projektant strony: <span class="footer-author">Piotr Jaruszowicz</span></p>
+  </footer>
+
+</body>
+
+</html>
