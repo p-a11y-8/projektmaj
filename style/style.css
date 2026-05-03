@@ -214,6 +214,10 @@ main {
     line-height: 1.8;
 }
 
+main h4 a {
+    color: #ffffff;
+}
+
 
 /* ===============================
    WIDEO TŁO (BACKGROUND)
