@@ -2,13 +2,35 @@
    GLOBALNE USTAWIENIA STRONY
    =============================== */
 
+:root {
+    --bg-color: rgb(0, 0, 0);
+    --text-color: white;
+    --accent-color: #ffffff;
+    --hover-bg: #ffffff4f;
+    --link-color: rgb(167, 167, 167);
+    --link-hover-color: rgb(218, 218, 218);
+
+    --text-white: #ffffff;
+    --text-gray-light: #eeeeee;
+    --text-gray-mid: #cccccc;
+    --text-gray: #aaaaaa;
+    --text-black: #000000;
+    --bg-overlay-95: rgba(0, 0, 0, 0.95);
+    --bg-overlay-80: rgba(0, 0, 0, 0.8);
+    --border-light: rgba(255, 255, 255, 0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow: hidden;
     overflow-y: auto;
-    background-color: rgb(0, 0, 0);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background-color: var(--bg-color);
+    font-family: 'Source Code Pro', monospace;
     line-height: 1.4;
-    color: white;
+    color: var(--text-color);
     scroll-behavior: smooth;
     transition: 0.5s ease-in-out;
 }
@@ -25,7 +47,7 @@ body {
     background: rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-light);
     border-radius: 50px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -49,7 +71,7 @@ body {
 .header {
     width: 100%;
     height: 120px;
-    background: linear-gradient(145deg, #000000d5, #00000080);
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.835), rgba(0, 0, 0, 0.5));
     position: sticky;
     top: 0;
     z-index: 2000;
@@ -153,7 +175,7 @@ body {
     width: 100%;
     height: 400px;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-light);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -264,7 +286,7 @@ video {
    =============================== */
 
 .glowna a {
-    color: rgb(218, 218, 218);
+    color: var(--link-hover-color);
 }
 
 
@@ -308,7 +330,7 @@ video {
 
 .submenu-label {
     text-decoration: none;
-    color: rgb(167, 167, 167);
+    color: var(--link-color);
     font-size: 30px;
     transition: 0.3s ease;
     cursor: pointer;
@@ -316,7 +338,7 @@ video {
 }
 
 .submenu-label:hover {
-    color: rgb(218, 218, 218);
+    color: var(--link-hover-color);
     font-size: 32px;
 }
 
@@ -328,7 +350,7 @@ video {
     transform: translateX(-50%) translateY(30px);
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-light);
     list-style: none;
     padding: 15px;
     border-radius: 15px;
@@ -361,13 +383,13 @@ video {
 
 .menu_active a {
     text-decoration: none;
-    color: rgb(167, 167, 167);
+    color: var(--link-color);
     font-size: 30px;
     transition: 1s ease;
 }
 
 .menu_active a:hover {
-    color: rgb(218, 218, 218);
+    color: var(--link-hover-color);
     font-size: 32px;
 }
 
@@ -828,7 +850,7 @@ a.button:hover {
     margin: 40px auto;
     padding: 30px;
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-light);
     border-radius: 20px;
     text-align: left;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
@@ -844,7 +866,7 @@ a.button:hover {
     width: 100%;
     padding: 15px;
     background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-light);
     border-radius: 12px;
     color: white;
     font-size: 1rem;
@@ -858,7 +880,7 @@ a.button:hover {
     border-color: rgba(255, 255, 255, 0.5);
     outline: none;
     background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px var(--border-light);
 }
 
 .contact-button {
@@ -929,7 +951,7 @@ a.button:hover {
     left: -1%;
     z-index: 10;
     background: rgba(0, 0, 0, 0.9);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border-light);
     text-align: center;
     padding: 30px 20px;
     color: rgba(255, 255, 255, 0.4);
@@ -989,6 +1011,10 @@ body.hc * {
     border-color: yellow;
 }
 
+body.hc .hc-switch {
+    text-decoration: underline;
+}
+
 /* ===============================
    JASNY TRYB
    =============================== */
@@ -1034,16 +1060,20 @@ body.wm * {
     border-color: black;
 }
 
+body.wm .wm-switch {
+    text-decoration: underline;
+}
+
 body.wm .logo {
     filter: grayscale(100%) brightness(20%);
 }
 
 body.wm .header {
-    background: rgba(233, 233, 233, 0.555);
+    background: var(--bg-overlay-80);
 }
 
 body.wm main {
-    background: rgba(233, 233, 233, 0.178);
+    background: var(--bg-overlay-95);
 }
 
 body.wm .video-mb video {
@@ -1055,7 +1085,7 @@ body.wm .video-pc video {
 }
 
 body.wm footer {
-    background: rgba(233, 233, 233, 0.705) !important;
+    background: var(--bg-overlay-95) !important;
 }
 
 body.wm .contact-form {
