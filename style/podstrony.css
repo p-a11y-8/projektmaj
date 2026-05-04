@@ -1055,6 +1055,10 @@ body.hc .hc-switch {
     cursor: pointer;
 }
 
+body.wm {
+    background-color: #fdfdfd !important;
+}
+
 body.wm * {
     color: black;
     border-color: black;
@@ -1069,11 +1073,11 @@ body.wm .logo {
 }
 
 body.wm .header {
-    background: var(--bg-overlay-80);
+    background: rgba(240, 240, 240, 0.473);
 }
 
 body.wm main {
-    background: var(--bg-overlay-95);
+    background: #fdfdfd41 !important;
 }
 
 body.wm .video-mb video {
@@ -1085,7 +1089,7 @@ body.wm .video-pc video {
 }
 
 body.wm footer {
-    background: var(--bg-overlay-95) !important;
+    background: #f0f0f0 !important;
 }
 
 body.wm .contact-form {
