@@ -2,15 +2,36 @@
    GLOBALNE USTAWIENIA STRONY
    =============================== */
 
+:root {
+    --bg-color: rgb(0, 0, 0);
+    --text-color: white;
+    --accent-color: #ffffff;
+    --hover-bg: #ffffff4f;
+    --link-color: rgb(167, 167, 167);
+    --link-hover-color: rgb(218, 218, 218);
+
+    --text-white: #ffffff;
+    --text-gray-light: #eeeeee;
+    --text-gray-mid: #cccccc;
+    --text-gray: #aaaaaa;
+    --text-black: #000000;
+    --bg-overlay-95: rgba(0, 0, 0, 0.95);
+    --bg-overlay-80: rgba(0, 0, 0, 0.8);
+    --border-light: rgba(255, 255, 255, 0.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow: hidden;
     overflow-y: auto;
-    background-color: rgb(0, 0, 0);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background-color: var(--bg-color);
+    font-family: 'Source Code Pro', monospace;
     line-height: 1.4;
-    color: white;
+    color: var(--text-color);
     scroll-behavior: smooth;
-
 }
 
 /* ===============================
@@ -50,7 +71,7 @@ body {
 .header {
     width: 102%;
     height: 120px;
-    background: linear-gradient(145deg, #000000d5, #00000080);
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.835), rgba(0, 0, 0, 0.5));
     position: sticky;
     top: 0;
     z-index: 2000;
@@ -80,7 +101,7 @@ body {
     font-size: 3.5rem;
     font-weight: 900;
     letter-spacing: -0.02em;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     transition: 1s ease-in-out;
 }
 
@@ -178,8 +199,24 @@ main {
     background: rgba(0, 0, 0, 0.8);
     padding: 50px 10%;
     border-radius: 40px 40px 0 0;
-    margin-top: -20px;
+    margin-top: -1.25rem;
     transition: 1s ease-in-out;
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    list-style: none;
+}
+
+main ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1.1rem;
+    line-height: 1.4;
 }
 
 .button {
@@ -267,7 +304,7 @@ main h4 a {
    =============================== */
 
 .glowna a {
-    color: rgb(218, 218, 218);
+    color: var(--link-hover-color);
 }
 
 
@@ -298,10 +335,11 @@ main h4 a {
 
 .menu_active li {
     display: inline-block;
-    margin: 10px 0;
-    padding: 0 12px;
+    margin: 5px 0;
+    padding: 0 10px;
     position: relative;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 #submenu-toggle,
@@ -311,7 +349,7 @@ main h4 a {
 
 .submenu-label {
     text-decoration: none;
-    color: rgb(167, 167, 167);
+    color: var(--link-color);
     font-size: 30px;
     transition: 0.3s ease;
     cursor: pointer;
@@ -319,7 +357,7 @@ main h4 a {
 }
 
 .submenu-label:hover {
-    color: rgb(218, 218, 218);
+    color: var(--link-hover-color);
     font-size: 32px;
 }
 
@@ -364,13 +402,13 @@ main h4 a {
 
 .menu_active a {
     text-decoration: none;
-    color: rgb(167, 167, 167);
+    color: var(--link-color);
     font-size: 30px;
     transition: 1s ease;
 }
 
 .menu_active a:hover {
-    color: rgb(218, 218, 218);
+    color: var(--link-hover-color);
     font-size: 32px;
 }
 
@@ -899,29 +937,20 @@ main h4 a {
 .site-footer {
     position: relative;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.9);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-overlay-95);
+    border-top: 1px solid var(--border-light);
     text-align: center;
     padding: 30px 20px;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--text-gray);
     font-size: 0.9rem;
     margin-top: 0;
-}
-
-.site-footer p {
-    margin: 5px 0;
-}
-
-.footer-author {
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: bold;
 }
 
 /* ===============================
    WYSOKI KONTRAST
    =============================== */
 .hc-switch {
-    color: rgb(167, 167, 167);
+    color: var(--link-color);
     font-size: 16px;
     cursor: pointer;
     display: inline-flex;
@@ -931,12 +960,12 @@ main h4 a {
 }
 
 .hc-switch:hover {
-    color: rgb(218, 218, 218);
+    color: var(--link-hover-color);
     font-size: 16px;
 }
 
 .menu .hc-switch {
-    color: #ffffff;
+    color: var(--text-white);
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -945,7 +974,7 @@ main h4 a {
 }
 
 .menu .hc-switch:hover {
-    color: #aaaaaa;
+    color: var(--text-gray);
 }
 
 .hc-switch input {
@@ -960,14 +989,17 @@ body.hc * {
     border-color: yellow;
 }
 
+body.hc .hc-switch {
+    text-decoration: underline;
+}
+
+
 
 /* ===============================
    JASNY TRYB
    =============================== */
-
-
 .wm-switch {
-    color: rgb(167, 167, 167);
+    color: var(--link-color);
     font-size: 16px;
     cursor: pointer;
     display: inline-flex;
@@ -981,12 +1013,12 @@ body.wm .logo {
 }
 
 .wm-switch:hover {
-    color: rgb(218, 218, 218);
+    color: var(--link-hover-color);
     font-size: 16px;
 }
 
 .menu .wm-switch {
-    color: #ffffff;
+    color: var(--text-white);
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -995,7 +1027,7 @@ body.wm .logo {
 }
 
 .menu .wm-switch:hover {
-    color: #aaaaaa;
+    color: var(--text-gray);
 }
 
 .wm-switch input {
@@ -1010,58 +1042,62 @@ body.wm * {
     border-color: black;
 }
 
+body.wm .wm-switch {
+    text-decoration: underline;
+}
+
 body.wm .header {
     background: rgba(233, 233, 233, 0.705);
 }
 
-body.wm main {
-    background: rgba(233, 233, 233, 0.705);
-}
+    body.wm main {
+        background: rgba(233, 233, 233, 0.705);
+    }
 
-body.wm .video-mb video {
-    filter: blur(50px) brightness(150%);
-}
+    body.wm .video-mb video {
+        filter: blur(50px) brightness(150%);
+    }
 
-body.wm .video-pc video {
-    filter: blur(50px) brightness(150%);
-}
+    body.wm .video-pc video {
+        filter: blur(50px) brightness(150%);
+    }
 
-body.wm footer {
-    background: rgba(233, 233, 233, 0.705);
-}
+    body.wm footer {
+        background: rgba(233, 233, 233, 0.705);
+    }
 
-body.wm .sub-lead {
-    color: #333333 !important;
-}
+    body.wm .sub-lead {
+        color: #333333 !important;
+    }
 
-body.wm .tresc li {
-    color: #222222;
-}
+    body.wm .tresc li {
+        color: #222222;
+    }
 
-body.wm .tresc p {
-    color: #111111;
-}
+    body.wm .tresc p {
+        color: #111111;
+    }
 
-body.wm .sub-menu,
-body.wm .menu {
-    background: rgba(255, 255, 255, 0.95);
-}
+    body.wm .sub-menu,
+    body.wm .menu {
+        background: rgba(255, 255, 255, 0.95);
+    }
 
-body.wm .menu .submenu-label,
-body.wm .menu .hc-switch,
-body.wm .menu .wm-switch {
-    color: black;
-}
+    body.wm .menu .submenu-label,
+    body.wm .menu .hc-switch,
+    body.wm .menu .wm-switch {
+        color: black;
+    }
 
-body.wm .menu .hc-switch:hover,
-body.wm .menu .wm-switch:hover {
-    color: #555555;
-}
+    body.wm .menu .hc-switch:hover,
+    body.wm .menu .wm-switch:hover {
+        color: #555555;
+    }
 
-body.wm .sub-menu-mb a {
-    color: #333333;
-}
+    body.wm .sub-menu-mb a {
+        color: #333333;
+    }
 
-body.wm .burger span {
-    background-color: black;
-}
+    body.wm .burger span {
+        background-color: black;
+    }
