@@ -1037,6 +1037,10 @@ body.wm .logo {
     cursor: pointer;
 }
 
+body.wm {
+    background-color: #fdfdfd !important;
+}
+
 body.wm * {
     color: black;
     border-color: black;
